@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="缓存状态" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MYS-Un-DO7">
+                                <rect key="frame" x="16" y="59" width="69.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="更新状态" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P1y-kA-cW6">
+                                <rect key="frame" x="16" y="94" width="69.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下载状态" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8F-te-TcJ">
+                                <rect key="frame" x="16" y="130" width="69.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zO2-nT-LHE">
+                                <rect key="frame" x="156" y="318" width="62" height="30"/>
+                                <state key="normal" title="资源检查"/>
+                                <connections>
+                                    <action selector="onButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Ks-im-hKt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s81-Mb-eSo">
+                                <rect key="frame" x="156" y="363" width="62" height="30"/>
+                                <state key="normal" title="强制更新"/>
+                                <connections>
+                                    <action selector="onDownloadButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="BaU-JB-cfD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zO2-nT-LHE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4ma-YQ-N6e"/>
+                            <constraint firstItem="MYS-Un-DO7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="59" id="5Zh-W1-8ba"/>
+                            <constraint firstItem="P1y-kA-cW6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="Hfy-eT-qov"/>
+                            <constraint firstItem="N8F-te-TcJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="K3r-Bd-rTe"/>
+                            <constraint firstItem="P1y-kA-cW6" firstAttribute="top" secondItem="MYS-Un-DO7" secondAttribute="bottom" constant="14" id="WuP-gV-rIt"/>
+                            <constraint firstItem="N8F-te-TcJ" firstAttribute="top" secondItem="P1y-kA-cW6" secondAttribute="bottom" constant="15" id="XLb-83-Juw"/>
+                            <constraint firstItem="s81-Mb-eSo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bZq-ek-6LD"/>
+                            <constraint firstItem="s81-Mb-eSo" firstAttribute="top" secondItem="zO2-nT-LHE" secondAttribute="bottom" constant="15" id="coE-aq-qvq"/>
+                            <constraint firstItem="zO2-nT-LHE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="k4z-Jz-Qup"/>
+                            <constraint firstItem="MYS-Un-DO7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="lO5-qS-Nne"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cacheLabel" destination="MYS-Un-DO7" id="4bw-Ta-Gls"/>
+                        <outlet property="downloadLabel" destination="N8F-te-TcJ" id="OVP-t6-x7N"/>
+                        <outlet property="needsUpdateLabel" destination="P1y-kA-cW6" id="mWB-QZ-Tnv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-60" y="105"/>
+        </scene>
+    </scenes>
+</document>
